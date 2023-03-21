@@ -66,6 +66,13 @@ for seconds in range(200):
             st.markdown("### Second Chart")
             fig2 = px.histogram(data_frame = df, x = 'age_new')
             st.write(fig2)
+        fig=plt.figure()
+ax=fig.add_axes([0,0,1,1])
+ax.axis('equal')
+langs=['C', 'C++', 'Java', 'Python', 'PHP']
+students=[23,17,35,29,12]
+ax.pie(students, labels=langs,autopct='%1.2f%%')
+plt.show()    
         st.markdown("### Detailed Data View")
         st.dataframe(df)
         time.sleep(1)
